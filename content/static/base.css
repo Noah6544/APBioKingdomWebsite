@@ -1,0 +1,131 @@
+
+
+.giant_flex {
+    display: flex;
+    flex-direction: row;
+}
+.flex_container {
+    flex: 55%;
+    display: flex;
+    flex-direction: column;
+    padding: 50px;
+    height: 5%;
+    margin: 50px;
+
+    outline: 1px solid black;
+    border-radius: 15px;
+
+}
+.imagediv {
+    flex: 45%;
+    display: flex;
+    flex-direction: column;
+      padding: 25px;
+    overflow: hidden;
+
+}
+img {
+
+
+    width: 400px;
+    height: auto;
+    overflow: hidden;
+
+}
+.topbar {
+
+    padding: 20px;
+    font-size: 25px;
+    font-family: 'Lato';
+    position: fixed;
+    display: flex;
+    height: 100%;
+    width: 220px;
+    flex-direction: column;
+    background-color: #111;
+
+}
+
+
+
+a {
+    text-decoration: none;
+    font-size: 30px;
+    font-weight: bold;
+
+}
+
+
+
+a, a:active, a:visited {
+    color: black;
+}
+
+.topbar a{
+    font-size: 30px;
+    padding-left: 10px;
+    padding-bottom: 25px;
+    font-weight: bold;
+    color:#999;
+
+
+
+
+}
+a:hover {
+    font-size: 35px;
+
+    cursor: point;
+    background-color: ;
+    font-weight: bold;
+    background-color: black;
+    border-radius:15px;
+    padding:5px;
+    color: white;
+
+    cursor: pointer;
+
+}
+.blockcontent {
+    font-family: 'Lato';
+    display: flex;
+    margin-left: 250px;
+}
+
+h1 {
+    padding: 15px;
+    font-weight: bold;
+
+}
+
+h2 {
+    font-weight: none;
+
+}
+
+h3 {
+    font-family: 'Arial';
+    font-weight: none;
+
+}
+
+h4 {
+    font-weight: none;
+
+}
+hr{
+    margin: 0 auto;
+}
+
+html, body {
+margin: 0;
+padding: 0;
+}
+
+ #homepageflex {
+    margin-left: 50px;
+}
+
+li {
+    font
+}

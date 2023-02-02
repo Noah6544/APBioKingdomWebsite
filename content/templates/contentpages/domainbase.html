@@ -1,0 +1,74 @@
+{% extends 'contentpages/topbar.html' %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'bass.css' %}">
+
+<html>
+{%block content%}
+
+    <div class="flex_container">
+        <h1>Welcome to the great <i>{{domain.title}}</i> kingdom!</h1><hr>
+
+    <ol>
+        <li><h2>Description/Characteristics:</h2>
+            <h3>{{ domain.characteristics }}</h3></li>
+
+        <li><h2>Divergent Event:</h2>
+            <h3>{{ domain.divergent_event }}</h3></li>
+
+        <li><h2>Cell Type:</h2>
+            <h3>{{ domain.cell_type }}</h3></li>
+
+        <li><h2>Body Plan:</h2>
+            <h3>{{ domain.body_plan }}</h3></li>
+
+        <li><h2>Metabolism:</h2>
+            <h3>{{ domain.metabolism }}</h3></li>
+
+        <li><h2>Circulatory:</h2>
+            <h3>{{ domain.circulatory }}</h3></li>
+
+        <li><h2>Respiratory:</h2>
+            <h3>{{ domain.respiratory }}</h3></li>
+
+        <li><h2>Reproduction:</h2>
+            <h3>{{ domain.reproduction }}</h3></li>
+
+        <li><h2>Examples:</h2>
+            <h3>{{ domain.examples }}</h3></li>
+
+        <li><h2>Keytraits(may not apply for all)</h2>
+            <h3>{{ domain.keytraits }}</h3></li>
+
+        <li><h2>Vocabulary:</h2>
+            <h3>{{ domain.vocabulary }}</h3></li>
+
+        <li><h2>Divergent Event:</h2>
+            <h3>{{ domain.divergent_event }}</h3></li>
+
+
+    </ol>
+    <h2>Additional information about the {{ domain.title }} kingdom! </h2>
+    <h3>Everything for "additional information" part of the assignment will go here.</h3>
+    {% for subheading in domain.subheading_set.all %}
+        <ul>
+            <li>
+                <h2>{{subheading.title}}</h2>
+                <h3>{{subheading.content|linebreaks}}</h3>
+            </li>
+        </ul>
+
+    {% endfor%}
+        </div>
+
+<div class="imagediv">
+    {% for image in image_list %}
+    <h2>{{image.title}}</h2>
+    <img src="{{image.image.url}}" alt="{{image.caption}}">
+    <h3>{{image.caption}}</h3>
+    {% endfor %}
+
+</div>
+
+</div>
+{%endblock%}
+</html>

@@ -1,0 +1,15 @@
+{% extends 'contentpages/topbar.html' %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'bass.css' %}">
+
+{% block content %}
+<div class="flex_container">
+    <h1>Visit each link to learn about each kingdom!<hr></h1>
+{% for domain in domain %}
+    <br><h1><a href="{% url 'content:Domain_url' domain.id %}">{{ domain.title }}</a></h1><hr>
+    <br><h3>Description: {{domain.description}}</h3>
+{% endfor %}
+</div>
+
+
+{% endblock %}
